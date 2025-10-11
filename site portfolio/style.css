@@ -30,6 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 90px;
+  animation: fadeIn 0.5s ease-in;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -82,7 +83,6 @@ h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.12; margin: 0 0 12px; }
 .btn.ghost {
   background: transparent;
   color: var(--text);
-  border: 1px solid color-mix(in oklab, var(--text) 20%, transparent);
 }
 
 h2 { font-size: clamp(22px, 3.5vw, 32px); color: var(--muted); margin: 0 0 12px; }
@@ -162,4 +162,26 @@ h2 { font-size: clamp(22px, 3.5vw, 32px); color: var(--muted); margin: 0 0 12px;
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+}
+
+.legal {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-left: 12px;
+}
+.legal:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.btn.ghost {
+  display: block;
+  margin: 48px auto 0;
+  text-align: center;
+  width: fit-content;
+  color: #9c8b67;
+}
+.btn.ghost:hover {
+  font-weight: 900;
+  transition: 0.2s;
 }
