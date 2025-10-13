@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact — Tristan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contactez Tristan pour un devis ou un projet web.">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700" rel="stylesheet">
+  <link rel="icon" href="favicon.webp">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header fade-in">
+    <nav class="nav">
+      <a class="brand" href="index.html">Accueil</a>
+      <ul class="nav-list">
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="index.html#offres">Offres</a></li>
+        <li><a href="index.html#apropos">Mon Profil</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="container section fade-in contact-layout">
+  <div class="two-columns">
+    <div class="col">
+      <h2>Demande de devis</h2>
+      <p>Décrivez brièvement votre projet, je reviendrai vers vous pour en parler plus amplement.</p>
+
+      <form
+        action="https://formspree.io/f/xkgqpbdk"
+        method="POST"
+        class="form-contact">
+
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="commerce">Nom de l'entreprise *</label>
+        <input type="text" id="commerce" name="commerce" required>
+
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="vision">Votre vision pour votre site</label>
+        <textarea id="vision" name="vision" rows="5"></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+
+      <p class="muted" style="margin-top:24px;">* Champs obligatoires</p>
+    </div>
+
+    <div class="col contact-info">
+      <h2>Contact</h2>
+      <h3>Contact professionnel</h3>
+      <p>Disponible pour de nouveaux projets ou collaborations.</p>
+      <p>Email : <a href="mailto:tristanbusiness112@gmail.com">tristanbusiness112@gmail.com</a></p>
+      <p>Mobile : <a href="tel:+33766591734">07.66.59.17.34</a></p>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="site-footer container fade-in">
+    <small>© <span id="year"></span> Tristan — Portfolio</small>
+    <a class="linkedin" href="https://www.linkedin.com/in/tristan-ramet-741343353" target="_blank" rel="noopener">
+      <img src="LinkedIn.svg.webp" alt="LinkedIn" width="24" height="24">
+    </a>
+    <a class="legal" href="mentions-legales.html">Mentions légales</a>
+    <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
