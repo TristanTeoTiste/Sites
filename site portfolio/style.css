@@ -426,3 +426,13 @@ h2 { font-size: clamp(22px, 3.5vw, 32px); color: var(--muted); margin: 0 0 12px;
 .brand:hover img.logo {
   transform: scale(1.1);
 }
+
+@media (max-width: 600px) {
+  .brand img.logo {
+    width: 32px;
+  }
+  .brand span {
+    font-size: 1rem;
+  }
+}
+
