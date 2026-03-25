@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact · Tristan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contactez Tristan pour un devis ou un projet de site vitrine.">
+  <meta name="theme-color" content="#060606">
+  <link rel="icon" href="favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="favicon.webp" alt="T" width="28" height="28">
+        tristan_
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#offre">offre</a></li>
+        <li><a href="index.html#projets">projets</a></li>
+        <li><a href="index.html#methode">méthode</a></li>
+        <li><a href="index.html#apropos">à propos</a></li>
+        <li><a href="contact.html" aria-current="page">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" style="padding-top:120px">
+    <div class="wrap">
+      <h1 class="section-heading rv">Demande de devis.</h1>
+      <p class="section-sub rv">Décrivez brièvement votre projet, je reviens vers vous sous 24h.</p>
+
+      <div class="contact-grid rv">
+        <form action="https://formspree.io/f/xkgqpbdk" method="POST" class="form-contact">
+          <div>
+            <label for="prenom">prénom *</label>
+            <input type="text" id="prenom" name="prenom" required>
+          </div>
+          <div>
+            <label for="commerce">nom de l'entreprise *</label>
+            <input type="text" id="commerce" name="commerce" required>
+          </div>
+          <div>
+            <label for="email">adresse e-mail *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="vision">votre projet en quelques mots</label>
+            <textarea id="vision" name="vision" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill">envoyer</button>
+          <p class="form-required">* champs obligatoires</p>
+        </form>
+
+        <div class="contact-aside">
+          <h3>Contact direct</h3>
+          <p>Disponible pour de nouveaux projets et collaborations.</p>
+          <p>Email<br><a href="mailto:tristanramet2@gmail.com">tristanramet2@gmail.com</a></p>
+          <p>Téléphone<br><a href="tel:+33766591734">07 66 59 17 34</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <small>&copy; <span id="year"></span> tristan_ · développeur web freelance</small>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/tristan-ramet-741343353" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="LinkedIn.svg.webp" alt="LinkedIn" width="18" height="18">
+        </a>
+        <a href="mentions-legales.html">mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const t=document.querySelector('.nav-toggle'),n=document.querySelector('.nav-links');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+    const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{threshold:.1});
+    document.querySelectorAll('.rv,.stg').forEach(el=>io.observe(el));
+  </script>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mentions légales · Tristan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mentions légales du site de Tristan, développeur web freelance.">
+  <meta name="theme-color" content="#060606">
+  <link rel="icon" href="favicon.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="favicon.webp" alt="T" width="28" height="28">
+        tristan_
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#offre">offre</a></li>
+        <li><a href="index.html#projets">projets</a></li>
+        <li><a href="index.html#methode">méthode</a></li>
+        <li><a href="index.html#apropos">à propos</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu" class="legal-page" style="padding-top:120px;padding-bottom:80px">
+    <div class="wrap">
+      <h1>Mentions légales</h1>
+
+      <section>
+        <h2>Éditeur du site</h2>
+        <p><strong>Nom :</strong> Tristan Ramet</p>
+        <p><strong>Statut :</strong> Entrepreneur individuel / freelance</p>
+        <p><strong>SIREN / SIRET :</strong> En cours d'immatriculation</p>
+        <p><strong>Responsable de la publication :</strong> Tristan Ramet</p>
+      </section>
+
+      <section>
+        <h2>Hébergement</h2>
+        <p><strong>Hébergeur :</strong> Vercel Inc.</p>
+        <p><strong>Site :</strong> <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></p>
+      </section>
+
+      <section>
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu du site (textes, images, code, graphismes) est la propriété exclusive de l'éditeur, sauf mention contraire. Toute reproduction, distribution ou modification sans autorisation est interdite.</p>
+      </section>
+
+      <section>
+        <h2>Protection des données</h2>
+        <p>Aucune donnée personnelle n'est collectée via ce site en dehors du formulaire de contact. Les informations transmises via le formulaire sont uniquement utilisées pour répondre à votre demande. Aucun cookie ni outil de suivi statistique n'est utilisé.</p>
+      </section>
+
+      <section>
+        <h2>Responsabilité</h2>
+        <p>Tristan Ramet ne peut être tenu responsable de tout dommage direct ou indirect résultant de l'utilisation du site ou de l'impossibilité d'y accéder. Les liens externes proposés ne relèvent pas de sa responsabilité.</p>
+      </section>
+
+      <br>
+      <a class="btn btn-ghost" href="index.html">&larr; retour à l'accueil</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <small>&copy; <span id="year"></span> tristan_ · développeur web freelance</small>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/tristan-ramet-741343353" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="LinkedIn.svg.webp" alt="LinkedIn" width="18" height="18">
+        </a>
+        <a href="mentions-legales.html">mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const t=document.querySelector('.nav-toggle'),n=document.querySelector('.nav-links');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+  </script>
+</body>
+</html>
